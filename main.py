@@ -22,4 +22,4 @@ device = max7219(serial, width=32, height=8, block_orientation=-90)
 
 if __name__ == '__main__':
     msg = weather.request_weather(openweather_url, openweather_key, zip_code)
-    show_message(device, msg, fill="white", font=proportional(LCD_FONT), scroll_delay=0.045)
+    show_message(device, msg, fill="white", font=proportional(LCD_FONT), scroll_delay=0.028)
