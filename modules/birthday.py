@@ -1,9 +1,13 @@
+import os
+
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
-def request_birthdays(link, email, password):
+def request_birthdays(link):
+    email = os.environ['facebook_email']
+    password = os.environ['facebook_password']
     try:
         birthdays = []
         driver = webdriver.Chrome()

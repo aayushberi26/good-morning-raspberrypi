@@ -13,8 +13,6 @@ from environment import (
     openweather_url,
     zip_code,
     facebook_birthday_url,
-    facebook_email,
-    facebook_password
 )
 from modules import (
     weather,
@@ -26,5 +24,5 @@ device = max7219(serial, width=32, height=8, block_orientation=-90)
 
 if __name__ == '__main__':
     msg = weather.request_weather(openweather_url, openweather_key, zip_code)
-    msg += birthday.request_birthdays(facebook_birthday_url, facebook_email, facebook_password)
+    msg += birthday.request_birthdays(facebook_birthday_url)
     show_message(device, msg, fill="white", font=proportional(LCD_FONT), scroll_delay=0.028)

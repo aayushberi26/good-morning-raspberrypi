@@ -7,5 +7,3 @@ zip_code = 12345
 
 # facebook
 facebook_birthday_url = 'https://www.facebook.com/events/birthdays/'
-facebook_email = ''
-facebook_password = ''
