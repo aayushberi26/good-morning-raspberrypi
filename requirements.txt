@@ -11,3 +11,4 @@ RPi.GPIO==0.6.3
 smbus2==0.1.5
 spidev==3.2
 urllib3==1.22
+selenium==3.4.3
