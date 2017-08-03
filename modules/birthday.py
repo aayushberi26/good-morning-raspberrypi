@@ -10,7 +10,8 @@ def request_birthdays(link):
     password = os.environ['facebook_password']
     try:
         birthdays = []
-        driver = webdriver.Chrome()
+        driver = webdriver.PhantomJS()
+        driver.maximize_window()
         driver.get(link)
         driver.find_element_by_id('email').send_keys(email)
         driver.find_element_by_id('pass').send_keys(password)
