@@ -1,9 +1,7 @@
-# openweather
-openweather_url = 'http://api.openweathermap.org/data/2.5/forecast?zip='
-openweather_key = ''
-
-# globals
-zip_code = 12345
+# accuwaether
+openweather_url = ''
+accuweather_location_code = 12345678
+accuweather_access_key = ''
 
 # facebook
 facebook_birthday_url = 'https://www.facebook.com/events/birthdays/'
