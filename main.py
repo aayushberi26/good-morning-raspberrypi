@@ -29,4 +29,4 @@ if __name__ == '__main__':
     if weather_response:
         msg += weather_response + ', '
     msg += birthday.request_birthdays(facebook_birthday_url)
-    show_message(device, msg, fill="white", font=proportional(LCD_FONT), scroll_delay=0.028)
+    show_message(device, msg, fill="white", font=proportional(LCD_FONT), scroll_delay=0.020)
