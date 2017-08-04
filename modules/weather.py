@@ -19,8 +19,3 @@ def request_weather(url, location_code, api_key):
     except:
         return None
 
-if __name__ == '__main__':
-    url = 'http://dataservice.accuweather.com/forecasts/v1/daily/1day/'
-    location_code = '2102599'
-    api_key = 'D7APbGqGf38GnNIAs1vPGgQkumgdAWZw'
-    print(request_weather(url, api_key, location_code))
