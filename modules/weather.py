@@ -10,7 +10,6 @@ def request_weather(url, location_code, api_key):
     try:
         r = requests.get(url + str(location_code) + '?apikey=' + api_key)
         data = r.json()
-        print(data)
         data = data['DailyForecasts'][0]
         low = data['Temperature']['Minimum']['Value']
         high = data['Temperature']['Maximum']['Value']
