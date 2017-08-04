@@ -24,7 +24,7 @@ serial = spi(port=0, device=0, gpio=noop())
 device = max7219(serial, width=32, height=8, block_orientation=-90)
 
 if __name__ == '__main__':
-    weather = weather.request_weather(accuweather_url, accuweather_location_code, accuweather_access_key)
+    weather_response = weather.request_weather(accuweather_url, accuweather_location_code, accuweather_access_key)
     if weather_response:
         msg = weather_response
     msg += birthday.request_birthdays(facebook_birthday_url)
