@@ -1,3 +1,4 @@
+import os
 import re
 import time
 
@@ -28,5 +29,6 @@ def display_data():
     weather_response = weather.request_weather(accuweather_url, accuweather_location_code, accuweather_access_key)
     if weather_response:
         msg += weather_response + ', '
-    msg += birthday.request_birthdays(facebook_birthday_url)
+    # birthdays previously stored in environment because the request takes a long time
+    msg += os.environ['birthdays']
     show_message(device, msg, fill="white", font=proportional(LCD_FONT), scroll_delay=0.020)

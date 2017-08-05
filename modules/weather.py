@@ -15,7 +15,7 @@ def request_weather(url, location_code, api_key):
         high = data['Temperature']['Maximum']['Value']
         day = data['Day']['IconPhrase']
         night = data['Night']['IconPhrase']
-        return 'High: ' + str(high) + ', Low: ' + str(low) + ', Day: ' + day + ', Night: ' + night
+        return 'Temp: ' + str(high) + ' - ' + str(low) + ', Day: ' + day + ', Night: ' + night
     except:
         return None
 

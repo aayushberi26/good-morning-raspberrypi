@@ -3,9 +3,6 @@ openweather_url = ''
 accuweather_location_code = 12345678
 accuweather_access_key = ''
 
-# facebook
-facebook_birthday_url = 'https://www.facebook.com/events/birthdays/'
-
 # aws
 aws_access_key_id = ''
 aws_secret_access_key = ''

@@ -5,9 +5,10 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
-def request_birthdays(link):
+def request_birthdays():
     email = os.environ['facebook_email']
     password = os.environ['facebook_password']
+    link = 'https://www.facebook.com/events/birthdays/'
     try:
         birthdays = []
         driver = webdriver.PhantomJS()
@@ -26,7 +27,9 @@ def request_birthdays(link):
         response = 'Birthdays: '
         for birthday in birthdays:
             response += birthday + ', '
-        return response[:-2]
+        os.environ['birthdays'] = response[:-2]
     # if element not found, means there are no birthdays
     except:
-        return 'No birthdays found'
+        os.environ['birthdays'] = 'No birthdays found'
+if __name__ == '__main__':
+    request_birthdays()
