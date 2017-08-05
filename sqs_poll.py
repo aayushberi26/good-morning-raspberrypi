@@ -14,7 +14,7 @@ def poll_and_run_script():
     while True:
         data = sqs.receive_message(
                     QueueUrl=aws_queue_url,
-                    MaxNumberOfMessages=10,
+                    MaxNumberOfMessages=1,
                     WaitTimeSeconds=20
                 )
         if 'Messages' in data:

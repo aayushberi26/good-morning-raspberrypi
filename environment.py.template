@@ -1,5 +1,5 @@
 # accuwaether
-openweather_url = ''
+accuweather_url = ''
 accuweather_location_code = 12345678
 accuweather_access_key = ''
 
