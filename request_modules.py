@@ -31,5 +31,5 @@ def display_data():
     if weather_response:
         msg += weather_response + ', '
         # birthdays previously stored because the request takes a long time
-        msg += birthday_out.birthdays
+        msg += birthday_output.birthdays
     show_message(device, msg, fill="white", font=proportional(LCD_FONT), scroll_delay=0.020)

@@ -32,7 +32,9 @@ def request_birthdays():
     except:
         response =  "'No birthdays'"
         
-    print('birthdays = ' + response)
+    output = open('birthday_output.py', 'w')
+    output.write('birthdays = ' + response)
+    output.close()
 
 if __name__ == '__main__':
     request_birthdays()
