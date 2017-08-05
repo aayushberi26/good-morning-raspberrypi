@@ -34,7 +34,7 @@ def request_birthdays():
         response = '"' + response + '"'
     # if element not found, means there are no birthdays
     except:
-        response =  "'No birthdays'"
+        response =  "'Birthdays: None'"
         
     output = open(output_path + 'birthday_output.py', 'w')
     output.write('birthdays = ' + response)
