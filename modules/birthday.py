@@ -31,5 +31,6 @@ def request_birthdays():
     # if element not found, means there are no birthdays
     except:
         os.environ['birthdays'] = 'No birthdays found'
+
 if __name__ == '__main__':
     request_birthdays()
