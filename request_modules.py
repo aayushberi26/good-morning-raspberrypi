@@ -13,8 +13,6 @@ from environment import (
     accuweather_url,
     accuweather_location_code,
     accuweather_access_key,
-    zip_code,
-    facebook_birthday_url,
 )
 from modules import (
     weather,

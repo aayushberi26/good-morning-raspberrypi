@@ -3,3 +3,4 @@ environment.py
 venv/
 *.log
 modules/birthday_output.py
+modules/facebook_credentials.py

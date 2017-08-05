@@ -5,9 +5,9 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
+from facebook_credentials import email, password
+
 def request_birthdays():
-    email = os.environ['facebook_email']
-    password = os.environ['facebook_password']
     link = 'https://www.facebook.com/events/birthdays/'
     try:
         birthdays = []
