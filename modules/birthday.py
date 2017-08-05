@@ -27,10 +27,11 @@ def request_birthdays():
         response = 'Birthdays: '
         for birthday in birthdays:
             response += birthday + ', '
-        os.environ['birthdays'] = response[:-2]
     # if element not found, means there are no birthdays
     except:
-        os.environ['birthdays'] = 'No birthdays found'
+        response = 'No birthdays found'
+        
+    print('birthdays = ' += response)
 
 if __name__ == '__main__':
     request_birthdays()

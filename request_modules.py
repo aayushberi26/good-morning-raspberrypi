@@ -18,7 +18,8 @@ from environment import (
 )
 from modules import (
     weather,
-    birthday
+    birthday,
+    birthday_output
 )
 
 serial = spi(port=0, device=0, gpio=noop())
@@ -29,6 +30,6 @@ def display_data():
     weather_response = weather.request_weather(accuweather_url, accuweather_location_code, accuweather_access_key)
     if weather_response:
         msg += weather_response + ', '
-    # birthdays previously stored in environment because the request takes a long time
-    msg += os.environ['birthdays']
+        # birthdays previously stored in environment because the request takes a long time
+        msg += birthday_out.birthdays
     show_message(device, msg, fill="white", font=proportional(LCD_FONT), scroll_delay=0.020)

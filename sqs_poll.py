@@ -1,5 +1,3 @@
-import time
-
 import boto3
 
 from request_modules import display_data
@@ -16,12 +14,11 @@ def poll_and_run_script():
     while True:
         data = sqs.receive_message(
                     QueueUrl=aws_queue_url,
-                    MaxNumberOfMessages=1,
+                    MaxNumberOfMessages=10,
                     WaitTimeSeconds=20
                 )
         if 'Messages' in data:
             display_data()
-            time.sleep(60)
             sqs.purge_queue(QueueUrl=aws_queue_url)            
 
 if __name__ == '__main__':
