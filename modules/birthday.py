@@ -27,9 +27,10 @@ def request_birthdays():
         response = 'Birthdays: '
         for birthday in birthdays:
             response += birthday + ', '
+        response = '"' + response + '"'
     # if element not found, means there are no birthdays
     except:
-        response = 'No birthdays found'
+        response =  "'No birthdays'"
         
     print('birthdays = ' + response)
 
