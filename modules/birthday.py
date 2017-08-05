@@ -26,11 +26,9 @@ def request_birthdays():
                 EC.presence_of_element_located((By.CLASS_NAME, '_fbBirthdays__todayCard'))
             )
         todays_birthdays_pro_pics = todays_birthdays_div.find_elements_by_tag_name('img')
-        for pro_pic in todays_birthdays_pro_pics:
-            birthdays.append(pro_pic.get_attribute('aria-label'))
         response = 'Birthdays: '
-        for birthday in birthdays:
-            response += birthday + ', '
+        for pro_pic in todays_birthdays_pro_pics:
+            response += pro_pic.get_attribute('aria-label') + ', '
         response = '"' + response + '"'
     # if element not found, means there are no birthdays
     except:
