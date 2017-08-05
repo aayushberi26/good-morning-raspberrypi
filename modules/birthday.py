@@ -5,7 +5,11 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
-from facebook_credentials import email, password
+from birthday_credentials import (
+    email,
+    password,
+    output_path
+)
 
 def request_birthdays():
     link = 'https://www.facebook.com/events/birthdays/'
@@ -32,7 +36,7 @@ def request_birthdays():
     except:
         response =  "'No birthdays'"
         
-    output = open('birthday_output.py', 'w')
+    output = open(output_path + 'birthday_output.py', 'w')
     output.write('birthdays = ' + response)
     output.close()
 
