@@ -31,7 +31,7 @@ def request_birthdays():
     except:
         response = 'No birthdays found'
         
-    print('birthdays = ' += response)
+    print('birthdays = ' + response)
 
 if __name__ == '__main__':
     request_birthdays()
