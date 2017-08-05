@@ -23,7 +23,7 @@ from modules import (
 serial = spi(port=0, device=0, gpio=noop())
 device = max7219(serial, width=32, height=8, block_orientation=-90)
 
-if __name__ == '__main__':
+def display_data():
     msg = ''
     weather_response = weather.request_weather(accuweather_url, accuweather_location_code, accuweather_access_key)
     if weather_response:
