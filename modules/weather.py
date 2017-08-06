@@ -1,5 +1,4 @@
 import requests
-import json
 
 def request_weather(url, location_code, api_key):
     '''
@@ -18,4 +17,3 @@ def request_weather(url, location_code, api_key):
         return 'Temp: ' + str(high) + ' - ' + str(low) + ', Day: ' + day + ', Night: ' + night
     except:
         return None
-

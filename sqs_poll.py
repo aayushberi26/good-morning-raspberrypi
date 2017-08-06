@@ -19,8 +19,7 @@ def poll_and_run_script():
                 )
         if 'Messages' in data:
             display_data()
-            sqs.purge_queue(QueueUrl=aws_queue_url)            
+            sqs.purge_queue(QueueUrl=aws_queue_url)
 
 if __name__ == '__main__':
     poll_and_run_script()
-

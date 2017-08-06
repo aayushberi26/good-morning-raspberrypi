@@ -1,5 +1,3 @@
-import os
-
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
@@ -14,7 +12,6 @@ from birthday_credentials import (
 def request_birthdays():
     link = 'https://www.facebook.com/events/birthdays/'
     try:
-        birthdays = []
         driver = webdriver.PhantomJS()
         driver.maximize_window()
         driver.get(link)
@@ -32,8 +29,8 @@ def request_birthdays():
         response = '"' + response + '"'
     # if element not found, means there are no birthdays
     except:
-        response =  "'Birthdays: None'"
-        
+        response = "'Birthdays: None'"
+
     output = open(output_path + 'birthday_output.py', 'w')
     output.write('birthdays = ' + response)
     output.close()
