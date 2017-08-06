@@ -26,11 +26,10 @@ def request_birthdays():
         response = 'Birthdays: '
         for pro_pic in todays_birthdays_pro_pics:
             response += pro_pic.get_attribute('aria-label') + ', '
-        response = '"' + response + '"'
+        response = '"' + response[:-2] + '"'
     # if element not found, means there are no birthdays
     except:
         response = "'Birthdays: None'"
-
     output = open(output_path + 'birthday_output.py', 'w')
     output.write('birthdays = ' + response)
     output.close()
